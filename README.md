@@ -2,6 +2,7 @@
 
 This repository contains code to deploy simple-serverles stack (api gateway --> lambda --> dynamodb) and to run error scenarios on created stack.
 
+### Deploy stack
 To deploy stack, run below command
 
 ```
@@ -16,6 +17,7 @@ cd /scripts
 ./deploy.sh delete
 ```
 
+#### Run various scenarios on the deployed stack
 Once the stack is up and running we can run various scenarios on the stack to simulate system and application level errors.
 Run script utility.sh to generate specific error scenarios. Based on the SCNENARIO-KEYWORD passed to the script, it takes action needed to generate the scenario.
 
