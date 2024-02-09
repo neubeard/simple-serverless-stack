@@ -2,7 +2,7 @@
 
 This repository contains code to deploy simple-serverles stack (api gateway --> lambda --> dynamodb) and to run error scenarios on created stack.
 
-### Deploy stack
+#### Deploy stack
 To deploy stack, run below command
 
 ```
