@@ -47,26 +47,26 @@ Allowed values for SCENARIO-KEYWORD:
 Keywords for various scenarios used in the script:
 
   - throttle_api  
-      Throttle AWS API Gateway resource  
+Throttle AWS API Gateway resource  
   - wrong_db
-      Use wrong dynamodb name in lambda function causing error
+Use wrong dynamodb name in lambda function causing error
   - throttle_lambda
-      Throttle lambda function
+Throttle lambda function
   - timeout_lambda
-      Simulate lambda function timeout
+Simulate lambda function timeout
   - duplicate_id_db_post
-      Trying to write same id twice in a batch dynamodb write request
+Trying to write same id twice in a batch dynamodb write request
   - max_write_db
-      Hit maximum write units on dynamodb
+Hit maximum write units on dynamodb
   - wrong_key_db_post
-      Calling with wrong primary key causing schema error
+Calling with wrong primary key causing schema error
   - large_item_db_post
-      Hit max individual item limit of 400KB in a batch write request to dynamodb
+Hit max individual item limit of 400KB in a batch write request to dynamodb
   - batch_write_limit_db
-      Update lambda to call in batch of 26 items to hit 25 items limit  
+Update lambda to call in batch of 26 items to hit 25 items limit  
   - wrong_lib_lambda
-      Update lambda with wrong import statement
+Update lambda with wrong import statement
   - batch_read_limit_db
-      Hit maximum read limit on bulk get of 100 items
+Hit maximum read limit on bulk get of 100 items
   - max_read_db
-      Hit maximum read provisioned units on dynamodb
+Hit maximum read provisioned units on dynamodb
