@@ -16,6 +16,10 @@ To delete stack, run below command
 cd /scripts
 ./deploy.sh delete
 ```
+#### Prerequisites
+Make sure you have AWS CLI access enabled using either ~/.aws/credentials file or env variables.
+
+Run write scenarios before read scenarios so that db has data for the read operations.
 
 #### Run various scenarios on the deployed stack
 Once the stack is up and running we can run various scenarios on the stack to simulate system and application level errors.
@@ -29,7 +33,6 @@ USAGE: ./utility.sh <SCENARIO-KEYWORD> <API_GATEWAY_URL>
   e.g. ./utility.sh throttle_api rp95f8wo9f.execute-api.us-east-2.amazonaws.com
 
 Allowed values for SCENARIO-KEYWORD:
-  - throttle_api
   - wrong_db
   - throttle_lambda
   - timeout_lambda
@@ -46,7 +49,6 @@ Allowed values for SCENARIO-KEYWORD:
 
 Keywords for various scenarios used in the script:
 
-  - *throttle_api*                --> Throttle AWS API Gateway resource  
   - *wrong_db*                    --> Use wrong dynamodb name in lambda function causing error
   - *throttle_lambda*             --> Throttle lambda function
   - *timeout_lambda*              --> Simulate lambda function timeout

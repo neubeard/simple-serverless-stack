@@ -162,7 +162,7 @@ EOF
   if [ "$ACTION" == "" ] || [ "$ACTION" == "yes" ]
   then
     terraform apply -auto-approve tfplan
-    curl -H "Content-type: application/json" -d "$(cat $SOURCE_JSON_DIR/bulk_read.json)" "https://$API_URL/bulkitems"
+    curl -XGET -H "Content-type: application/json" -d "$(cat $SOURCE_JSON_DIR/bulk_read.json)" "https://$API_URL/bulkitems"
   fi
 }
 
@@ -218,7 +218,7 @@ EOF
     terraform apply -auto-approve tfplan
     for i in 1 2 3
     do
-      curl  -H "Content-type: application/json" -d "$(cat $SOURCE_JSON_DIR/bulk_read_limit.json)" "https://$API_URL/bulkitems"
+      curl -XGET -H "Content-type: application/json" -d "$(cat $SOURCE_JSON_DIR/bulk_read_limit.json)" "https://$API_URL/bulkitems"
     done
   else
     exit 1
